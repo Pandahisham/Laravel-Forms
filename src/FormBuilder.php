@@ -46,14 +46,14 @@ class FormBuilder implements FormBuilderContract
     private function render($view)
     {
         return view($view, [
-            'fields'       => $this->fields(),
-            'route'        => $this->route,
-            'method'       => $this->method,
-            'submit'       => $this->submit,
-            'labelWidths'  => $this->generateLabelClasses(),
-            'fieldWidths'  => $this->generateFieldClasses(),
+            'fields' => $this->fields(),
+            'route' => $this->route,
+            'method' => $this->method,
+            'submit' => $this->submit,
+            'labelWidths' => $this->generateLabelClasses(),
+            'fieldWidths' => $this->generateFieldClasses(),
             'buttonWidths' => $this->generateButtonClasses(),
-            'helpOffsets'  => $this->generateHelpClasses(),
+            'helpOffsets' => $this->generateHelpClasses(),
         ]);
     }
 
@@ -98,8 +98,8 @@ class FormBuilder implements FormBuilderContract
 
         foreach ($this->labelWidths() as $key => $value) {
             $fieldWidth = 12 - $value;
-            $offset     = ' col-'.$key.'-offset-'.$value;
-            $column     = ' col-'.$key.'-'.$fieldWidth;
+            $offset = ' col-'.$key.'-offset-'.$value;
+            $column = ' col-'.$key.'-'.$fieldWidth;
 
             if (in_array($key, ['xs', 'sm'])) {
                 continue;
