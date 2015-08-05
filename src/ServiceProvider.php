@@ -16,9 +16,4 @@ class ServiceProvider extends BaseProvider
              ->loadViews()
              ->mergeConfig('forms');
     }
-
-    public function register()
-    {
-        //
-    }
 }
